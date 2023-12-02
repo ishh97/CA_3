@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@300&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <title>Meal Selector</title>
+</head>
+
+<body>
+    
+    <div>
+        <!-- title -->
+        <h1 class="title">Meal Selector</h1>
+        <p class="description">Feeling indecisive about what to eat? Our meal selector is your personal chef, ready to
+            suggest tasty and hassle-free meals with ingredients and recipe</p>
+         <!-- search box -->
+        <div class="search">
+            <div class="searchBox_button">
+                <input type="search" placeholder="Search by Category" id="searchInput">
+                <button id="searchBox" onclick="search()">Search</button>
+            </div>
+            <!-- Category list -->
+            <p class="statement">You can search from the following categories:</p>
+            <div class="category">
+                <div class="list">
+                    <ul>
+                        <li>Breakfast</li>
+                        <li>Starter</li>
+                        <li>Side</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>Vegan</li>
+                        <li>Vegetarian</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>Pasta</li>
+                        <li>Dessert</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>Beef</li>
+                        <li>Pork</li>
+                        <li>Lamb</li>
+                        <li>Chicken</li>
+                        <li>Goat</li>
+                        <li>Seafood</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>Miscellaneous</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- RAndom Meal -->
+    <div>
+        <h2 class="titleRandom">Meal of the day : Recommended</h2>
+        <div class="container" id="RandomMeal">
+            <h2 id="RandomName" onclick="ShowIngredients()"></h2>
+            <div id="RandomImg" onclick="ShowIngredients()"></div>
+        </div>
+    </div>
+    <div id="mealInfo">
+        <h2 id="mealCategory"></h2>
+        <div id="mealImg"></div>
+        <h2 id="meal"></h2>
+        <div id="errorMessage"></div>
+    </div>
+
+    <div id="modal" class="modal">
+
+        <div class="model-content grid" id="modal-content">
+            <div class="close" onclick="CloseIngredients()">&times;</div>
+            <div id="modalName"></div>
+            <div id="modalIngredients"></div>
+            <div id="modalLink"></div>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
